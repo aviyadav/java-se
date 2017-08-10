@@ -1,4 +1,4 @@
-package org.sample.javase;
+package org.sample.misc;
 
 public class App {
         public static void main (String[] args) {
