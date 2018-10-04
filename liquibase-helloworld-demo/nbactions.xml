@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-liquibase-update</actionName>
+            <displayName>liquibase-update</displayName>
+            <goals>
+                <goal>liquibase:update</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-liquibase-rollbacl to tag 1.0</actionName>
+            <displayName>liquibase-rollbacl to tag 1.0</displayName>
+            <goals>
+                <goal>liquibase:rollback</goal>
+                <goal>-Dliquibase.rollbackTag=1.0</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-update to tag 1.1</actionName>
+            <displayName>update to tag 1.1</displayName>
+            <goals>
+                <goal>liquibase:update</goal>
+                <goal>-Dliquibase.toTag=1.1</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-generateChangeLog</actionName>
+            <displayName>generateChangeLog</displayName>
+            <goals>
+                <goal>liquibase:generateChangeLog</goal>
+                <goal>-Dliquibase.outputChangeLogFile=C:\Users\Q845332\codebase\data\temp\output.xml</goal>
+            </goals>
+        </action>
+    </actions>

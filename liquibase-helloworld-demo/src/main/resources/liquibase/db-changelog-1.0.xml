@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns='http://www.liquibase.org/xml/ns/dbchangelog'
+    xsi:schemaLocation='http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd'>
+    <changeSet id="create_department" author="q845332">
+        <createTable tableName="department">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="name" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+    
+    <changeSet id="create_employee" author="q945332">
+        <createTable tableName="employee">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="emp_name" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="dept" type="int" />
+        </createTable>
+    </changeSet>
+    
+    <changeSet id="tag-1.0" author="q845332">
+        <tagDatabase tag="1.0" />
+    </changeSet>
+</databaseChangeLog>

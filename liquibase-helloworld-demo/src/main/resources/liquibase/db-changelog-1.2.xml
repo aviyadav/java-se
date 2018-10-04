@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns='http://www.liquibase.org/xml/ns/dbchangelog'
+    xsi:schemaLocation='http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd'>
+    <changeSet id="add-fk-between-emp-and-dept" author="q845332">
+        <addForeignKeyConstraint baseTableName="employee" baseColumnNames="dept" constraintName="fk_emp_dept" referencedTableName="department" referencedColumnNames="id" onDelete="CASCADE" onUpdate="CASCADE" />
+    </changeSet>
+    
+    <changeSet id="add_index" author="q845332">
+        <createIndex tableName="employee" indexName="idex_exp_name">
+            <column name="emp_name" />
+        </createIndex>
+    </changeSet>
+    
+    <changeSet id="tag-1.2" author="q845332">
+        <tagDatabase tag="1.2" />
+    </changeSet>
+</databaseChangeLog>

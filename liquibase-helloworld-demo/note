@@ -1,0 +1,28 @@
+Liquibase
+
+mvn liquibase:update
+liquibase  --defaultsFile=src/main/resources/liquibase/liquibase.properties \
+           --classpath="d:\mysql-connector-java-5.1.6.jar;D:\spring-learning\liquibase-helloworld-demo\target\liquibase-helloworld-demo.jar"  \
+           --changeLogFile=liquibase/db-changelog-master.xml   \
+           update
+		   
+
+		   	
+mvn liquibase:rollback -Dliquibase.rollbackTag=1.0
+liquibase  --defaultsFile=src/main/resources/liquibase/liquibase.properties \
+           --classpath="d:\mysql-connector-java-5.1.6.jar;D:\spring-learning\liquibase-helloworld-demo\target\liquibase-helloworld-demo.jar"  \
+           --changeLogFile=liquibase/db-changelog-master.xml   \
+           rollback 1.0
+		   
+mvn liquibase:update -Dliquibase.toTag=1.1
+liquibase  --defaultsFile=src/main/resources/liquibase/liquibase.properties \
+           --classpath="d:\mysql-connector-java-5.1.6.jar;D:\spring-learning\liquibase-helloworld-demo\target\liquibase-helloworld-demo.jar"  \
+           --changeLogFile=liquibase/db-changelog-master.xml   \
+           updateToTag 1.1
+		   
+		   
+mvn liquibase:generateChangeLog -Dliquibase.outputChangeLogFile=d:\output.xml
+liquibase  --defaultsFile=src/main/resources/liquibase/liquibase.properties \
+           --classpath="d:\mysql-connector-java-5.1.6.jar;D:\spring-learning\liquibase-helloworld-demo\target\liquibase-helloworld-demo.jar"  \
+           --changeLogFile=d:\output.xml   \
+           generateChangeLog
