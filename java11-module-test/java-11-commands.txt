@@ -1,0 +1,37 @@
+// list java modules
+java --list-modules
+
+// describe a modules
+java --describe-module java.sql
+
+javac -d mods/com.mydeveloperplanet.jpmshello src/com.mydeveloperplanet.jpmshello/module-info.java src/com.mydeveloperplanet.jpmshello/com/mydeveloperplanet/jpmshello/HelloModules.java
+
+java --module-path mods --module com.mydeveloperplanet.jpmshello/com.mydeveloperplanet.jpmshello.HelloModules
+
+jar --create --file target/jpms-hello-modules.jar --main-class com.mydeveloperplanet.jpmshello.HelloModules -C mods/com.mydeveloperplanet.jpmshello .
+
+java --module-path target/jpms-hello-modules.jar --module com.mydeveloperplanet.jpmshello/com.mydeveloperplanet.jpmshello.HelloModules
+
+java --module-path target/jpms-hello-modules.jar --describe-module com.mydeveloperplanet.jpmshello
+
+
+
+// multi-module
+javac -d mods --module-source-path src src/com.mydeveloperplanet.jpmshello/module-info.java src/com.mydeveloperplanet.jpmshello/com/mydeveloperplanet/jpmshello/HelloModules.java src/com.mydeveloperplanet.jpmshi/module-info.java src/com.mydeveloperplanet.jpmshi/com/mydeveloperplanet/jpmshi/HiModules.java
+
+
+jar --create --file target/jpms-hi-modules.jar -C mods/com.mydeveloperplanet.jpmshi .
+
+jar --create --file target/jpms-hello-modules.jar --main-class com.mydeveloperplanet.jpmshello.HelloModules -C mods/com.mydeveloperplanet.jpmshello .
+
+java --module-path target --module com.mydeveloperplanet.jpmshello/com.mydeveloperplanet.jpmshello.HelloModules
+
+
+
+
+
+// creating custom JRE
+jlink --module-path ../jmods --add-modules java.base --output d:\java\jre
+
+// adding to custom JRE
+jlink --module-path ../jmods --add-modules java.base,java.xml --output d:\java\jre
