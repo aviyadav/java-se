@@ -1,0 +1,10 @@
+<rootelem>
+    <myelem name="abc" myatt="true"/>
+
+    <myelem name="def">
+        <key value="newvalue"/>
+    </myelem>
+    <myelem name="xyz">
+        <key value="42"/>
+    </myelem>
+</rootelem>
