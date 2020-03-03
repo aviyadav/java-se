@@ -1,0 +1,44 @@
+project:
+    artifactId: book
+    name: book
+    version: 1.0
+    description: Demo project for info endpoint
+    
+info:
+    artifactId: ${project.artifactId}
+    name: ${project.name}
+    version: ${project.version}
+    description: ${project.description}
+    
+eureka:
+    instance:
+        leaseRenewalIntervalInSeconds: 10
+    client:
+        enabled: true
+        registryFetchIntervalSeconds: 5
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: ${EUREKA_ZONE}
+      
+server:
+    port: 8080
+    
+datasource:
+  url: jdbc:postgresql://localhost:5452/postgres
+  username: postgres
+  password: password
+  validationQuery: SELECT 1
+  initialSize: 1
+  maxActive: 3
+  testWhileIdle: true
+  testOnBorrow: true
+  
+jpa:
+  show-sql: true
+  format_sql: true
+  properties:
+    org:
+      hibernate:
+        flushMode: AUTO
+        entity_dirtiness_strategy: com.sample.db.postgres.jsonb.data.strategy.EntityDirtinessStrategy

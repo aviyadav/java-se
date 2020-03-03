@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+    <department>
+        <persons>
+            <person id="1">
+                <name>Red</name>
+                <role>1</role>
+            </person>
+            <person id="2">
+                <name>Green</name>
+                <role>2</role>
+            </person>
+            <person id="3">
+                <name>Blue</name>
+                <role>2</role>
+            </person>
+            <person id="4">
+                <name>Yellow</name>
+                <role>3</role>
+            </person>
+            <person id="5">
+                <name>Brown</name>
+                <role>3</role>
+            </person>
+            <person id="1">
+                <name>Red</name>
+                <role>1</role>
+            </person>
+            <person id="2">
+                <name>Green</name>
+                <role>2</role>
+            </person>
+            <person id="3">
+                <name>Blue</name>
+                <role>2</role>
+            </person>
+            <person id="4">
+                <name>Yellow</name>
+                <role>3</role>
+            </person>
+            <person id="5">
+                <name>Brown</name>
+                <role>3</role>
+            </person>
+        </persons>
+        <roles>
+            <role id="1">
+                <position>head</position>
+                <salary>10k</salary>
+            </role>
+            <role id="2">
+                <position>manager</position>
+                <salary>8k</salary>
+            </role>
+            <role id="3">
+                <position>employee</position>
+                <salary>5k</salary>
+            </role>
+            <role id="1">
+                <position>head</position>
+                <salary>10k</salary>
+            </role>
+            <role id="2">
+                <position>manager</position>
+                <salary>8k</salary>
+            </role>
+            <role id="3">
+                <position>employee</position>
+                <salary>5k</salary>
+            </role>
+        </roles>
+    </department>
+</root>

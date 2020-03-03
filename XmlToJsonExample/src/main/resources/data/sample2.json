@@ -1,0 +1,45 @@
+{
+    "roles": [
+        {
+            "id": "1",
+            "position": "head",
+            "salary": "10k",
+            "persons": [
+                {
+                    "id": "1",
+                    "name": "Red"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "position": "manager",
+            "salary": "8k",
+            "persons": [
+                {
+                    "id": "2",
+                    "name": "Green"
+                },
+                {
+                    "id": "3",
+                    "name": "Blue"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "position": "employee",
+            "salary": "5k",
+            "persons": [
+                {
+                    "id": "4",
+                    "name": "Yellow"
+                },
+                {
+                    "id": "5",
+                    "name": "Brown"
+                }
+            ]
+        }
+    ]
+}

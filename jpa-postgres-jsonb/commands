@@ -1,0 +1,35 @@
+sudo pg_ctlcluster 12 main start 		sudo pg_ctlcluster 12 main stop
+systemctl status postgresql.service
+sudo su postgres
+psql -c "alter user postgres with password 'password'"
+
+psql -d fhirbase -U postgres -W password
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Install PostgreSQL - https://www.postgresql.org/download/
+2. Download Fhirbase - https://www.health-samurai.io/fhirbase-downloads
+3. Create Database - $ psql -c 'CREATE DATABASE fhirbase;'
+4. Initialize FHIR-schema - $ fhirbase -d fhirbase --fhir=3.3.0 init
+5.  Load FHIR resources - $ fhirbase -d fhirbase --fhir=3.3.0 load http://bulk-api-server.com/fhir/Patient/$export
+6. Start Fhirbase Web UI - $ fhirbase -d fhirbase web 
+
+fhirbase --host localhost -p 5432 -d fhirbase -U postgres -W postgres --fhir=3.3.0 load -m insert bundle.ndjson.gzip
+
+fhirbase -d fhirbase web
+http://localhost:300
+0
+https://www.blitzz.io/product
+
+
+
